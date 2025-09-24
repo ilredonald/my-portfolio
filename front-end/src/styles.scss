@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../src/app/core/components/portals/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--all-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  margin-right: 5x;
+}
+
+//////////////
+.p-10 {
+  padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+.hover-active {
+  transition: all 0.2s;
+  &:hover {
+    border-radius: 10px;
+    background: var(--btn-color);
+    color: white;
+  }
+  &:active {
+    background: var(--validate-color);
+    color: gray;
+    transform: scale(0.9);
+    font-size: 0.98rem;
+  }
+}
+
+.hover-border-bottom {
+  &:hover {
+    border-bottom: 2px solid var(--btn-color);
+    color: var(--btn-color);
+  }
+}
+.text-white {
+  color: white;
+}
+
+.nav-active {
+  border-bottom: 2px solid var(--btn-color);
+  color: var(--btn-color);
+}

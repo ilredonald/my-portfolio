@@ -1,0 +1,49 @@
+//import
+@use '../portals/variables';
+//header
+.header {
+  margin-top: 10px;
+  display: grid;
+  grid:
+    '. logo . onglets .' 7vh
+    / 100px 50px auto 1fr 10px;
+  place-items: center center;
+  .logo {
+    grid-area: logo;
+  }
+
+  .onglets {
+    grid-area: onglets;
+
+    display: grid;
+    grid: 'reseaux . nav . download' auto / 300px auto 500px auto 150px;
+    place-items: center center;
+    .reseaux {
+      grid-area: reseaux;
+      display: flex;
+    }
+    .nav {
+      grid-area: nav;
+      display: flex;
+    }
+    .download {
+      grid-area: download;
+
+      border: 0;
+      border-radius: 10px;
+      background: var(--btn-color);
+      color: white;
+      padding: 15px;
+      font-size: 0.8rem;
+      transition: all 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
+      &:active {
+        background: var(--validate-color);
+        color: var(--all-color);
+        transform: scale(0.9);
+      }
+    }
+  }
+}
