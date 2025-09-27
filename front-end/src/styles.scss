@@ -32,6 +32,10 @@ i {
 .p-15 {
   padding: 15px;
 }
+
+.mr-10 {
+  margin-right: 10px;
+}
 .hover-active {
   transition: all 0.2s;
   &:hover {
@@ -59,5 +63,9 @@ i {
 
 .nav-active {
   border-bottom: 2px solid var(--btn-color);
+  color: var(--btn-color);
+}
+
+.blue {
   color: var(--btn-color);
 }
