@@ -1,0 +1,71 @@
+//imports
+//@use '../portals/variables';
+
+//main
+main {
+  height: 1000px;
+  .container {
+    width: 82%;
+    margin: 10rem auto 0 auto;
+
+    display: grid;
+    grid:
+      'message img' auto
+      / 500px auto;
+
+    place-items: center center;
+    .message {
+      grid-area: message;
+      height: 50vh;
+
+      display: grid;
+      grid:
+        'h1' 100px
+        'whoIam' auto
+        '.' auto
+        'btn' 5vh
+        / auto;
+
+      h1 {
+        grid-area: h1;
+        line-height: 3rem;
+      }
+
+      .whoIam {
+        grid-area: whoIam;
+        line-height: 2rem;
+        //letter-spacing: 0.2rem;
+        font-size: 1.2rem;
+      }
+      .btn {
+        grid-area: btn;
+
+        width: 25%;
+        border: 0;
+        border-radius: 10px;
+        background: var(--btn-color);
+        padding: 0.5rem 0.8rem;
+
+        font-size: 1rem;
+        transition: all 0.2s;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          background: var(--validate-color);
+          color: var(--all-color);
+          transform: scale(0.9);
+        }
+      }
+      //color: white;
+      //padding: 10px;
+    }
+    .img {
+      border-radius: 20px;
+      grid-area: img;
+      width: 100%;
+      height: 50vh;
+      background: url('../../../../../src/assets/web-developer.gif') center/cover;
+    }
+  }
+}
